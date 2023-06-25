@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+ 
+  
+</head>
+<body>
+    <div id="a">
+        <div id="a1" onclick="fun();this.onclick=null;" style="font-size:50px;text-align: center;">
+        </div>
+        <div id="a2" onclick="fun1();this.onclick=null;" style="font-size:50px;text-align: center;">
+        </div>
+        <div id="a3" onclick="fun2();this.onclick=null;" style="font-size:50px;text-align: center;">
+        </div>
+    </div>
+    <div id="b" >
+        <div id="b1"  onclick="fun3();this.onclick=null;" style="font-size:50px;text-align: center;">
+        </div>
+        <div id="b2"  onclick="fun4();this.onclick=null;" style="font-size:50px;text-align: center;">
+        </div>
+        <div id="b3" onclick="fun5();this.onclick=null;" style="font-size:50px;text-align: center;">
+        </div>
+    </div>
+    <div id="c" >
+        <div id="c1"  onclick="fun6();this.onclick=null;" style="font-size:50px;text-align: center;">
+        </div>
+        <div id="c2"  onclick="fun7();this.onclick=null;" style="font-size:50px;text-align: center;">
+        </div>
+        <div id="c3" onclick="fun8();this.onclick=null;" style="font-size:50px;text-align: center;">
+        </div>
+    </div>
+    
+    <p style="font-size:50px;" id="demo"></p>
+    
+
+    <button onclick="end()">rematch</button>
+    <script>
+        var count;
+        var a=0;
+        var x="1";
+        var y="2";
+        var z="3";
+        var x1="4";
+        var y1="5";
+        var z1="6";
+        var x2="7";
+        var y2="8";
+        var z2="9";
+        var x3="10";
+        var y3="11";
+        var z3="12";
+        function call(e,f,g,e1,f1,g1,e2,f2,g2){
+            
+    if( (e=="x"&&f=="x"&&g=="x")||(e1=="x"&&f1=="x"&&g1=="x")||(e2=="x"&&f2=="x"&&g2=="x")||(e=="x"&&e1=="x"&&e2=="x")||(f=="x"&&f1=="x"&&f2=="x")||(g=="x"&&g1=="x"&&g2=="x")||(e=="x"&&f1=="x"&&g2=="x")||(g=="x"&&f1=="x"&&e2=="x")){
+        console.log(e);
+        console.log(g);
+        document.getElementById("demo").innerHTML="x User wins the game";
+        count++;
+    }
+    else if((e=="o"&&f=="o"&&g=="o")||(e1=="o"&&f1=="o"&&g1=="o")||(e2=="o"&&f2=="o"&&g2=="o")||(e=="o"&&e1=="o"&&e2=="o")||(f=="o"&&f1=="o"&&f2=="o")||(g=="o"&&g1=="o"&&g2=="o")||(e=="o"&&f1=="o"&&g2=="o")||(g=="o"&&f1=="o"&&e2=="o")){
+    document.getElementById("demo").innerHTML="o User wins the game";
+    count++;
+    }
+}
+if(count==0){
+    document.getElementById("demo").innerHTML="M User wins the game";
+}
+function fun(){
+    a++;
+    if(a%2==0){
+        document.getElementById("a1").innerHTML="x";
+    }
+    else{ 
+            document.getElementById("a1").innerHTML="o";
+
+    }
+    x=document.getElementById("a1").innerHTML;
+draw(a);
+      call(x,y,z,x1,y1,z1,x2,y2,z2);
+}
+function fun1(){
+    a++;
+    if(a%2==0){
+        
+        document.getElementById("a2").innerHTML="x";}
+       
+    
+    else{
+       
+        document.getElementById("a2").innerHTML="o";}
+        y=document.getElementById("a2").innerHTML;
+    call(x,y,z,x1,y1,z1,x2,y2,z2);
+    draw(a);
+}
+function fun2(){
+    a++;
+    if(a%2==0){
+       
+        document.getElementById("a3").innerHTML="x";}
+        
+    else{ 
+        document.getElementById("a3").innerHTML="o";
+    }
+    z=document.getElementById("a3").innerHTML;
+    call(x,y,z,x1,y1,z1,x2,y2,z2);
+    draw(a);
+}
+function fun3(){
+    a++;
+    if(a%2==0){
+       
+        document.getElementById("b1").innerHTML="x";
+    }
+    else{ 
+        document.getElementById("b1").innerHTML="o";
+    }
+    x1=document.getElementById("b1").innerHTML;
+    call(x,y,z,x1,y1,z1,x2,y2,z2);
+    draw(a);
+}
+function fun4(){
+    a++;
+    if(a%2==0){
+      
+        document.getElementById("b2").innerHTML="x";
+    }
+    else{ 
+        document.getElementById("b2").innerHTML="o";
+    }
+    y1=document.getElementById("b2").innerHTML;
+    call(x,y,z,x1,y1,z1,x2,y2,z2);
+    draw(a);
+}function fun5(){
+    a++;
+    if(a%2==0){
+       
+        document.getElementById("b3").innerHTML="x";
+    }
+    else{
+        document.getElementById("b3").innerHTML="o";
+    }
+    z1=document.getElementById("b3").innerHTML;
+    call(x,y,z,x1,y1,z1,x2,y2,z2);
+    draw(a);
+}
+function fun6(){
+    a++;
+    if(a%2==0){
+       
+        document.getElementById("c1").innerHTML="x";
+    }
+    else{
+        document.getElementById("c1").innerHTML="o";
+    }
+    x2=document.getElementById("c1").innerHTML;
+    call(x,y,z,x1,y1,z1,x2,y2,z2);
+    draw(a);
+}function fun7(){
+    a++;
+    if(a%2==0){
+       
+        document.getElementById("c2").innerHTML="x";
+    }
+    else{
+        document.getElementById("c2").innerHTML="o";
+    }
+    y2=document.getElementById("c2").innerHTML;
+    call(x,y,z,x1,y1,z1,x2,y2,z2);
+    draw(a);
+}function fun8(){
+    a++;
+    if(a%2==0){
+        
+        document.getElementById("c3").innerHTML="x";
+    }
+    else{
+        document.getElementById("c3").innerHTML="o";
+    }
+    z2=document.getElementById("c3").innerHTML;
+    call(x,y,z,x1,y1,z1,x2,y2,z2);
+    draw(a);
+}
+
+function end(){
+    window.open("xox.html");
+}
+function draw(l){
+if(l==9){
+    console.log(l);
+    document.getElementById("demo").innerHTML="match draw";
+}
+else{
+    console.log(l)
+}
+}
+
+
+
+    </script>
+    
+</body>
+</html>
